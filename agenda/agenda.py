@@ -176,7 +176,6 @@ def menu():
             excluir_contato(contatos)
 
         elif opcao == "0":
-            print("Encerrando sistema...")
             break
 
         else:
