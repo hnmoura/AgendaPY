@@ -4,10 +4,10 @@ Os dados são armazenados no arquivo:
 
 contatos.txt
 
-Como Executar o Projeto
+Como Executar o Projeto: 
+
 Instale o Python 3 na máquina
 Baixe o arquivo do projeto
-
 Execute o programa:
 python agenda.py
 
