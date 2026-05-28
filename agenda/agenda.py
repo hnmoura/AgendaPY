@@ -69,7 +69,7 @@ def listar_contatos(contatos): # Função para listar os contatos
         print("Nenhum contato cadastrado.")
         return
 
-    for i, contato in enumerate(contatos): #Os contatos são enumados aqui pra que sejam impressos com um número identificador 
+    for i, contato in enumerate(contatos): #Os contatos são enumerados aqui pra que sejam impressos com um número identificador 
 
         print(f"\nContato {i + 1}")
         print(f"Nome: {contato['nome']}")
@@ -78,18 +78,17 @@ def listar_contatos(contatos): # Função para listar os contatos
         print(f"Endereço: {contato['endereco']}")
 
 
-def buscar_contato(contatos): #Função para listar os contatos 
+def buscar_contato(contatos):
 
     print("\n BUSCAR CONTATO")
 
-    nome_busca = input("Digite o nome: ")
+    nome_busca = input("Digite o nome do contato: ")
 
     encontrado = False
 
     for contato in contatos:
 
-        if contato["nome"]() == nome_busca():
-
+        if contato["nome"].strip().lower() == nome_busca.strip().lower(): #É importante que haja o filtro de letras minúsculas pra que as informações sejam exibidas corretamente   
             print("\nContato encontrado:")
             print(f"Nome: {contato['nome']}")
             print(f"Telefone: {contato['telefone']}")
@@ -109,7 +108,7 @@ def editar_contato(contatos): #Função para editar os contatos
 
     for contato in contatos:
 
-        if contato["nome"]() == nome_busca():
+        if contato["nome"] == nome_busca:
 
             print("Digite os novos dados:")
 
@@ -133,7 +132,7 @@ def excluir_contato(contatos): #Função para excluir os contatos
 
     for contato in contatos:
 
-        if contato["nome"]() == nome_busca():
+        if contato["nome"] == nome_busca:
 
             contatos.remove(contato)
 
